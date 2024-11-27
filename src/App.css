@@ -1,0 +1,83 @@
+#root {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+@font-face {
+  font-family: "digital";
+  src: url(./assets/DS-DIGI.TTF);
+  font-weight: normal;
+  font-style: normal;
+}
+main {
+  border: 1px solid black;
+  width: 40vh;
+  border-radius: 3px;
+  background-color: grey;
+  min-width: 208px;
+  min-height: 260px;
+}
+.displaySection {
+  font-family: "digital";
+  background-color: grey;
+  min-height: 11vh;
+  width: 100%;
+  align-items: end;
+  justify-content: end;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  padding-right: 4px;
+}
+.equation {
+  width: 100%;
+  font-size: max(15px, 4vh);
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  line-height: 1;
+  flex-wrap: wrap;
+  word-break: break-word;
+  color: rgb(97, 2, 2);
+}
+#display {
+  max-width: 100%;
+  font-size: max(20px, 6vh);
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  line-height: 1;
+  flex-wrap: wrap;
+  word-break: break-word;
+}
+.keysContainer {
+  height: 45vh;
+  min-height: 260px;
+  display: grid;
+  grid-template-areas:
+    "clear clear divide  multiply"
+    "seven eight nine    subtract"
+    "four  five  six     add"
+    "one   two   three   equals"
+    "zero  zero  decimal equals";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+.key {
+  background-color: grey;
+  border: 1px solid black;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: azure;
+  font-weight: bold;
+  font-size: max(12px, 3vh);
+}
+.key:hover {
+  border: 1px solid rgb(182, 182, 182);
+  cursor: pointer;
+}
